@@ -1,7 +1,10 @@
-const names = require('./4_names')
-const sayHi = require('./5_names')
-const data = require('./6_alternative')
-// sayHi('susan')
-// sayHi(names.john)
-// sayHi(names.peter)
-require('./7_mind_grenade')
+const http = require('http');
+
+const server = http.createServer((req,res)=>{
+
+    res.write('welcome to our home page')
+res.end()
+})
+
+server.listen(5000)
+
